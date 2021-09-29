@@ -5,7 +5,8 @@ TODO: Espectadores puedan escribir reseñas sobre ESPECTACULOS
 TODO: interaccionar con criticas mediante rating
 
 CLASES:
-- Espectador: Nombre y apellidos, username, email UNICO,
+
+OK: - Espectador: Nombre y apellidos, username, email UNICO,
 
 -Critica: Titulo,puntuacion otrogada, texto de reseña, valoraciones de otros usuarios
 
