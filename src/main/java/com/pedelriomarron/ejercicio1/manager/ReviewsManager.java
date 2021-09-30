@@ -1,5 +1,14 @@
 package com.pedelriomarron.ejercicio1.manager;
 
+import com.pedelriomarron.ejercicio1.review.Review;
+import com.pedelriomarron.ejercicio1.review.ReviewBuilder;
+import com.pedelriomarron.ejercicio1.users.User;
+import com.pedelriomarron.ejercicio1.users.UserBuilder;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class ReviewsManager {
 
 
@@ -16,6 +25,62 @@ public class ReviewsManager {
 
     }
 
+
+    public User register(String email,String name,String lastName,String username){
+        User user = new UserBuilder()
+                .withEmail(email)
+                .withName(name,lastName)
+                .withUsername(username)
+                .build();
+
+        //TODO: Añadir al fichero
+        return user;
+    }
+
+    public User unsubscribe(User user){
+
+        //Todo: borrar del fichero
+
+        return user;
+    }
+
+    public User checkUserData(String email){
+        User user = new UserBuilder()
+                    .build();
+
+        //TODO: buscar en fichero usuario
+        return  user;
+    }
+
+    public User updateUser(String email){
+        User user = new UserBuilder()
+                .build();
+
+        //TODO:Actualizar fichero
+        return user;
+    }
+
+    public Review createReview(String title,long body,Integer score){
+        Review review = new ReviewBuilder()
+                .withTitle(title)
+                .withBody(body)
+                .withScore(score)
+                .withRatings(new ArrayList<Map<User,Integer>>())
+                .build();
+
+        //TODO: Añadir al fichero
+        return review;
+    }
+
+    public List<Review> checkAllReviews(){
+        List<Review> reviews = new ArrayList<Review>();
+
+
+        //TODO: Recoger todos del fichero
+
+
+        return reviews;
+    }
 
 
 }

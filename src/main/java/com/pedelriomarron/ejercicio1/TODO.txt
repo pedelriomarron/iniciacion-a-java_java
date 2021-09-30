@@ -16,13 +16,13 @@ Reseña solo se puede valorar una vez por usuario
 OK Gestor de criticas unico independiente del objeto que lo invoque, (singleton)
 
 metodos del gestor:
-dar de alta a un usuario
-dar de baja a un usuario
-consultar los datos del usuario
-actualizar los datos de un usuario
+Ok dar de alta a un usuario
+OK dar de baja a un usuario
+OK consultar los datos del usuario
+OK actualizar los datos de un usuario
 
-crear critica
-consultar todas las criticas disponibles
+OK crear critica
+ok consultar todas las criticas disponibles
 borrar critica si el usuario es quien la escribio
 votar la critica de otro
 buscar criticas de un usuario registrado
