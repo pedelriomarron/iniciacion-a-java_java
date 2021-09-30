@@ -6,6 +6,7 @@ import com.pedelriomarron.ejercicio1.users.User;
 import com.pedelriomarron.ejercicio1.users.UserBuilder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -82,5 +83,29 @@ public class ReviewsManager {
         return reviews;
     }
 
+    public boolean deleteReview(Review review,User user){
+
+        if(review.getUser().getEmail().equals(user.getEmail())){
+            //TODO: metodo que borre el fichero
+            return true;
+        }else{
+            System.out.println("Usuario no es el creador de la reseña"); // FIXME: cambiar idioma
+            return false;
+        }
+
+    }
+
+    public boolean ratingReview(Review review,User user,Integer score){
+
+        if(!review.getUser().getEmail().equals(user.getEmail())){
+            //TODO: acabar
+            //TODO: metodo que añada opinion a critica en  el fichero
+            return true;
+        }else{
+            System.out.println("Usuario es el creador de la reseña"); // FIXME: cambiar idioma
+            return false;
+        }
+
+    }
 
 }

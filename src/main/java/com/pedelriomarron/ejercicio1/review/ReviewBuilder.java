@@ -12,6 +12,7 @@ public class ReviewBuilder {
     private int score;
     private long body;
     private List<? extends Map<User,Integer>> ratings;
+    private User user;
 
 
     public ReviewBuilder(){};
@@ -37,6 +38,13 @@ public class ReviewBuilder {
         return this;
     }
 
+    public ReviewBuilder withUser(User user){
+        this.user = user;
+        return this;
+    }
+
+
+
 
     public Review build(){
         Review review = new Review();
@@ -45,6 +53,7 @@ public class ReviewBuilder {
         review.setBody(this.body);
         review.setScore(this.score);
         review.setRatings(this.ratings);
+        review.setUser(this.user);
 
 
         return review;

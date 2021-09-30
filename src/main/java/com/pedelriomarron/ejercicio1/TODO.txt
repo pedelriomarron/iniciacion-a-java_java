@@ -23,7 +23,7 @@ OK actualizar los datos de un usuario
 
 OK crear critica
 ok consultar todas las criticas disponibles
-borrar critica si el usuario es quien la escribio
+OK borrar critica si el usuario es quien la escribio
 votar la critica de otro
 buscar criticas de un usuario registrado
 
