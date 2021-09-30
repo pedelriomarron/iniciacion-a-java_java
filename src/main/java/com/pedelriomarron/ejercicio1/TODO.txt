@@ -8,12 +8,12 @@ CLASES:
 
 OK: - Espectador: Nombre y apellidos, username, email UNICO,
 
--Critica: Titulo,puntuacion otrogada, texto de reseña, valoraciones de otros usuarios
+OK: -Critica: Titulo,puntuacion otrogada, texto de reseña, valoraciones de otros usuarios
 
 El Usuario NO podra valorar su propia critica
 Reseña solo se puede valorar una vez por usuario
 
-Gestor de criticas unico independiente del objeto que lo invoque, (singleton)
+OK Gestor de criticas unico independiente del objeto que lo invoque, (singleton)
 
 metodos del gestor:
 dar de alta a un usuario
