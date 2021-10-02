@@ -10,7 +10,7 @@ public class Review {
     private String title;
     private int score;
     private long body;
-    private List<? extends Map<User,Integer>> ratings; //FIXME: solo el map
+    private Map<User,Integer> ratings; //FIXME: solo el map
     private User user;
 
 
@@ -22,8 +22,8 @@ public class Review {
     public void setScore(int score) {this.score = score;}
     public long getBody() {return body;}
     public void setBody(long body) {this.body = body;}
-    public List<? extends Map<User, Integer>> getRatings() {return ratings;}
-    public void setRatings(List<? extends Map<User, Integer>> ratings) {this.ratings = ratings;}
+    public Map<User, Integer> getRatings() {return ratings;}
+    public void setRatings(Map<User, Integer> ratings) {this.ratings = ratings;}
     public User getUser() {return user;}
     public void setUser(User user) {this.user = user;}
 }

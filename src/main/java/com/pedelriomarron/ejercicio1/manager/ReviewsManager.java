@@ -66,7 +66,7 @@ public class ReviewsManager {
                 .withTitle(title)
                 .withBody(body)
                 .withScore(score)
-                .withRatings(new ArrayList<Map<User,Integer>>())
+                .withRatings(new HashMap<User,Integer>())
                 .build();
 
         //TODO: Añadir al fichero
@@ -98,14 +98,19 @@ public class ReviewsManager {
     public boolean ratingReview(Review review,User user,Integer score){
 
         if(!review.getUser().getEmail().equals(user.getEmail())){
-            //TODO: acabar
+            review.getRatings().put(user,score);
             //TODO: metodo que añada opinion a critica en  el fichero
             return true;
         }else{
             System.out.println("Usuario es el creador de la reseña"); // FIXME: cambiar idioma
             return false;
         }
+    }
 
+    public Map<Review,Integer> searchReviewsOfUser(User user){
+        Map<Review,Integer> reviews = new HashMap<Review,Integer>();
+        // TODO: Metodo para buscar reviews de un usuario
+        return reviews;
     }
 
 }

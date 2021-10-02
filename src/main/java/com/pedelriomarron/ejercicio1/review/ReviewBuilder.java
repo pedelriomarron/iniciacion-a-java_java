@@ -11,7 +11,7 @@ public class ReviewBuilder {
     private String title;
     private int score;
     private long body;
-    private List<? extends Map<User,Integer>> ratings;
+    private Map<User,Integer> ratings;
     private User user;
 
 
@@ -33,7 +33,7 @@ public class ReviewBuilder {
         return this;
     }
 
-    public ReviewBuilder withRatings(List<? extends Map<User,Integer>> ratings){
+    public ReviewBuilder withRatings(Map<User,Integer> ratings){
         this.ratings = ratings;
         return this;
     }

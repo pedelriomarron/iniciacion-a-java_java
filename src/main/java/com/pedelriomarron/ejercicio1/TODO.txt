@@ -24,8 +24,8 @@ OK actualizar los datos de un usuario
 OK crear critica
 ok consultar todas las criticas disponibles
 OK borrar critica si el usuario es quien la escribio
-votar la critica de otro
-buscar criticas de un usuario registrado
+OK votar la critica de otro
+OK buscar criticas de un usuario registrado
 
 Leer/ escribir datos en un fichero de texto plano, gestor de criticas se encarga de cargar el listado
 inicializar y acceder a las funcionalidades crud
