@@ -1,5 +1,6 @@
 package com.pedelriomarron.ejercicio1.manager;
 
+import com.pedelriomarron.ejercicio1.dao.impl.UserDaoImpl;
 import com.pedelriomarron.ejercicio1.review.Review;
 import com.pedelriomarron.ejercicio1.review.ReviewBuilder;
 import com.pedelriomarron.ejercicio1.users.User;
@@ -34,7 +35,8 @@ public class ReviewsManager {
                 .withUsername(username)
                 .build();
 
-        //TODO: Añadir al fichero
+        UserDaoImpl.getDao().create(user);
+
         return user;
     }
 
@@ -61,7 +63,7 @@ public class ReviewsManager {
         return user;
     }
 
-    public Review createReview(String title,long body,Integer score){
+    public Review createReview(String title,String body,Integer score){
         Review review = new ReviewBuilder()
                 .withTitle(title)
                 .withBody(body)

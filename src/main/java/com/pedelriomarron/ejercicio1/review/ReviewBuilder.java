@@ -7,10 +7,10 @@ import java.util.Map;
 
 public class ReviewBuilder {
 
-
+    private long id;
     private String title;
     private int score;
-    private long body;
+    private String body;
     private Map<User,Integer> ratings;
     private User user;
 
@@ -28,7 +28,7 @@ public class ReviewBuilder {
         return this;
     }
 
-    public ReviewBuilder withBody(long body){
+    public ReviewBuilder withBody(String body){
         this.body = body;
         return this;
     }
@@ -43,12 +43,16 @@ public class ReviewBuilder {
         return this;
     }
 
+    public ReviewBuilder withId(long id){
+        this.id = id;
+        return this;
+    }
 
 
 
     public Review build(){
         Review review = new Review();
-
+        review.setId(this.id);
         review.setTitle(this.title);
         review.setBody(this.body);
         review.setScore(this.score);
