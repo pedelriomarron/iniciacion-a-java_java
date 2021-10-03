@@ -44,7 +44,6 @@ public class UserDaoImpl implements IUserDao {
             stmt.setString(3, user.getLastName());
             stmt.setString(4, user.getUsername());
 
-
             int result = stmt.executeUpdate();
             /*ResultSet rs = stmt.getGeneratedKeys();*/
             /*
@@ -52,15 +51,13 @@ public class UserDaoImpl implements IUserDao {
                 user.setId(rs.getInt(1));
             }
             */
-
             return result;
         } catch (SQLException e) {
-            // e.printStackTrace();
+            e.printStackTrace();
             throw new RuntimeException(e);
         } finally {
             SQLiteConnectionDao.closePs(stmt);
             SQLiteConnectionDao.closeConn(conn);
-
         }
     }
 
@@ -70,8 +67,23 @@ public class UserDaoImpl implements IUserDao {
     }
 
     @Override
-    public User delete(String s) {
-        return null;
+    public int delete(String s) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+
+        try {
+            conn = SQLiteConnectionDao.getConnection();
+            stmt = conn.prepareStatement(DELETE);
+            stmt.setString(1, s);
+
+            return stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            SQLiteConnectionDao.closePs(stmt);
+            SQLiteConnectionDao.closeConn(conn);
+        }
     }
 
     @Override

@@ -13,12 +13,13 @@ public class App {
         System.out.println("Test");
         new SQLiteConnectionDao();
         User user = new UserBuilder()
-                .withEmail("delrio")
+                .withEmail("pedro@doee")
                 .withUsername("marron")
                 .withName("pe","r")
                 .build();
 
-        ReviewsManager.getReviewsManager().register("pedro@doee","Pedro","deroo","perico");
+       // ReviewsManager.getReviewsManager().register("pedro@doee","Pedro","deroo","perico");
+        ReviewsManager.getReviewsManager().unsubscribe(user);
 
     }
 }

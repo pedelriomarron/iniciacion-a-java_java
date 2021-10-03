@@ -22,8 +22,8 @@ public class ReviewDaoImpl implements IReviewDao {
     }
 
     @Override
-    public Review delete(String s) {
-        return null;
+    public int delete(String s) {
+        return 0;
     }
 
     @Override

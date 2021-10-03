@@ -7,7 +7,7 @@ public interface Dao<T,K> {
     T get(K k);
     int create(T t);
     T update(T t);
-    T delete(K k);
+    int delete(K k);
     List<T> getAll();
 
 

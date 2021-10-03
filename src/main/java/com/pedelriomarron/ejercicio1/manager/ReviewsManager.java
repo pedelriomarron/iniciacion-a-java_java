@@ -42,7 +42,7 @@ public class ReviewsManager {
 
     public User unsubscribe(User user){
 
-        //Todo: borrar del fichero
+        UserDaoImpl.getDao().delete(user.getEmail());
 
         return user;
     }
